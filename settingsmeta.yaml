@@ -1,0 +1,23 @@
+{
+    "skillMetadata": {
+        "sections": [
+            {
+                "name": "Applications",
+                "fields": [
+                    {
+                        "name": "web browser",
+                        "type": "text",
+                        "label": "The default web-browser",
+                        "value": "firefox"
+                    }
+		    {
+			"name": "terminal",
+			"type": "text",
+			"label": "The default terminal",
+			"value": "sterminal"
+		    }
+                ]
+            }
+        ]
+    }
+}
