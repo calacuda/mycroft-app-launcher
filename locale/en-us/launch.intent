@@ -1,10 +1,5 @@
-launch a {app}
-run a {app}
-open a {app}
-start a {app}
-spin up a {app}
-launch the {app}
-run the {app}
-open the {app}
-start the {app}
-spin up the {app}
+launch (a | the) {app}
+run (a | the) {app}
+open (a | the) {app}
+start (a | the) {app}
+spin up (a | the) {app}
