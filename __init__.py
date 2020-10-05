@@ -14,7 +14,7 @@ import os.system as run
 
 class Launcher(MycroftSkill):
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
 
     def initialize(self):
         self.register_intent_file("launch.intent", self.handle_launch_intent)
