@@ -17,7 +17,9 @@ class Launcher(MycroftSkill):
         super().__init__(self)
 
     def initialize(self):
-         self.set_settings()
+        self.register_intent_file("launch.intent", self.handle_launch_intent)
+        self.register_entity_file("app.entity")
+        self.set_settings()
 
     def set_settings(self):
         #browser = self.settings.get('browser')
@@ -28,7 +30,7 @@ class Launcher(MycroftSkill):
         self.set_settings()
 
     @intent_handler('launch.intent')
-    def handle_launch__intent(self, app):
+    def handle_launch_intent(self, app):
         speak(f"app is {app}")
         application = apps.get(app)
         speak(f"launching {application}")
