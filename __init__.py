@@ -29,7 +29,7 @@ class Launcher(MycroftSkill):
     def on_settings_changed(self):
         self.set_settings()
 
-    @intent_handler('launch.intent')
+    @intent_handler(IntentBuilder('launch.intent').require('app'))
     def handle_launch_intent(self, app):
         speak(f"app is {app}")
         application = apps.get(app)
