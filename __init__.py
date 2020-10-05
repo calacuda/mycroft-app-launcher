@@ -31,9 +31,9 @@ class Launcher(MycroftSkill):
 
     @intent_handler(IntentBuilder('launch.intent').require('app'))
     def handle_launch_intent(self, app):
-        speak(f"app is {app}")
+        self.speak(f"app is {app}")
         application = apps.get(app)
-        speak(f"launching {application}")
+        self.speak(f"launching {application}")
         run(application)
         
     def stop(self):
@@ -41,4 +41,5 @@ class Launcher(MycroftSkill):
 
 
 def create_skill():
+    run("mimic \"fooabr\"")
     return Launcher()
