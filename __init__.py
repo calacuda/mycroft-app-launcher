@@ -8,7 +8,7 @@ class Launcher(MycroftSkill):
     def __init__(self):
         super().__init__()
         #self.initialize()
-        self.apps = self.settings_meta
+        self.apps = self.settings.keys()
         
     def initialize(self):
         self.register_entity_file("app.entity")
@@ -24,9 +24,9 @@ class Launcher(MycroftSkill):
         #run(f'echo "context {app.context}" >> ~/out.txt')
         #a = "app"
         try:
-            run(f'echo "apps :  {apps}" >> ~/apps.txt')
+            run(f'echo "apps :  {apps}" > ~/apps.txt')
         except:
-            run(f'echo "apps not assigned" >> ~/apps.txt')
+            run(f'echo "apps not assigned" > ~/apps.txt')
         #application = "sterminal"
         try:
             #application = self.apps.get(app)
