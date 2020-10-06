@@ -11,9 +11,10 @@ class Launcher(MycroftSkill):
 
     def initialize(self):
         self.register_entity_file("app.entity")
+        self.register_intent_file("launch.intent", self.handle_launch_intent)
         self.apps = self.settings.get("Applications")
         
-    @intent_handler("launch.intent")
+    #@intent_handler("launch.intent")
     def handle_launch_intent(self, app):
         #self.speak(f"app is {app}")
         #print("app : ", app)
