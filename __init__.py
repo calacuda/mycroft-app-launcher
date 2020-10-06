@@ -7,16 +7,19 @@ class Launcher(MycroftSkill):
 
     def __init__(self):
         super().__init__()
+        #self.initialize()
 
     def initialize(self):
-        self.register_intent("launch.intent", self.handle_launch_intent)
-        self.register_entity("app.entity")
+        self.apps = self.settings.get("Applications")
         
-    @intent_handler(IntentBuilder("LaunchIntnet").require("launch.voc"))
+    @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
-        self.speak(f"app is {app}")
-        application = apps.get(app)
-        self.speak(f"launching {application}")
+        #self.speak(f"app is {app}")
+        print("app : ", app)
+        application = "sterminal"
+        # application = self.apps.get(app)
+        #self.speak(f"launching {application}")
+        self.acknowledge()
         run(application)
         
     def stop(self):
@@ -24,6 +27,7 @@ class Launcher(MycroftSkill):
 
 
 def create_skill():
+    Launcher().handle_launch_intent("literally fucking anything")
     return Launcher()
 
 create_skill()
