@@ -18,13 +18,13 @@ class Launcher(MycroftSkill):
     def handle_launch_intent(self, app):
         #self.speak(f"app is {app}")
         #print("app : ", app)
-        run(f'echo "msg-type {app.msg_type}" >> ~/out.txt')
-        run(f'echo "data {app.data}" >> ~/out.txt')
-        run(f'echo "context {app.context}" >> ~/out.txt')
-        a = "app"
-        run(f'echo "app :  {app.data.get(a)}" >> ~/out.txt')
-        application = "sterminal"
-        # application = self.apps.get(app)
+        #run(f'echo "msg-type {app.msg_type}" >> ~/out.txt')
+        #run(f'echo "data {app.data}" >> ~/out.txt')
+        #run(f'echo "context {app.context}" >> ~/out.txt')
+        #a = "app"
+        #run(f'echo "app :  {app.data.get(a)}" >> ~/out.txt')
+        #application = "sterminal"
+        application = self.apps.get(app)
         #self.speak(f"launching {application}")
         self.acknowledge()
         run(application)
