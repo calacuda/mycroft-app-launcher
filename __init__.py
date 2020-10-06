@@ -12,7 +12,7 @@ class Launcher(MycroftSkill):
         self.register_intent("launch.intent", self.handle_launch_intent)
         self.register_entity("app.entity")
         
-    @intent_handler('launch.intent')
+    @intent_handler(IntentBuilder("LaunchIntnet").require("launch.voc"))
     def handle_launch_intent(self, app):
         self.speak(f"app is {app}")
         application = apps.get(app)
