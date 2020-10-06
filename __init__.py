@@ -22,7 +22,7 @@ class Launcher(MycroftSkill):
         #run(f'echo "data {app.data}" >> ~/out.txt')
         #run(f'echo "context {app.context}" >> ~/out.txt')
         #a = "app"
-        #run(f'echo "app :  {app.data.get(a)}" >> ~/out.txt')
+        run(f'echo "apps :  {apps}" >> ~/apps.txt')
         #application = "sterminal"
         application = self.apps.get(app)
         #self.speak(f"launching {application}")
