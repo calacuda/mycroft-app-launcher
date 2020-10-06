@@ -8,12 +8,11 @@ class Launcher(MycroftSkill):
     def __init__(self):
         super().__init__()
         #self.initialize()
-        self.apps = self.settings.get("Applications")
         
     def initialize(self):
         self.register_entity_file("app.entity")
         #self.register_intent_file("launch.intent", self.handle_launch_intent)
-        self.apps = self.settings.get("Applications")
+        self.apps = self.settings
         
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
@@ -23,7 +22,10 @@ class Launcher(MycroftSkill):
         #run(f'echo "data {app.data}" >> ~/out.txt')
         #run(f'echo "context {app.context}" >> ~/out.txt')
         #a = "app"
-        run(f'echo "apps :  {apps}" >> ~/apps.txt')
+        try:
+            run(f'echo "apps :  {apps}" >> ~/apps.txt')
+        except:
+            run(f'echo "apps not assigned" >> ~/apps.txt')
         #application = "sterminal"
         try:
             application = self.apps.get(app)
