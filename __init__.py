@@ -16,7 +16,7 @@ class Launcher(MycroftSkill):
     def handle_launch_intent(self, app):
         #self.speak(f"app is {app}")
         #print("app : ", app)
-        run(f'echo "{type(app)}" >> ~/out.txt')
+        run(f'echo "{app.__dict__.keys()}" >> ~/out.txt')
         application = "sterminal"
         # application = self.apps.get(app)
         #self.speak(f"launching {application}")
