@@ -36,12 +36,12 @@ class Launcher(MycroftSkill):
         #    run(f'echo "application is sterminal" >> ~/apps.txt')
         #    application = "sterminal"
         #self.speak(f"launching {application}")
-        application = self.settings.get(app)
+        application = self.settings.get(app.replace("web browser", "browser"))
         self.acknowledge()
         try:
             run(application)
         except:
-            run(f'echo "got error when running :  {application}\nsettings :  {self.settings}" >> ~/apps.txt')
+            run(f'echo "got error when running :  {application}\nsettings :  {type(self.settings)} {self.settings}" >> ~/apps.txt')
             run("sterminal")
             
     def stop(self):
