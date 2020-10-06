@@ -13,7 +13,7 @@ class Launcher(MycroftSkill):
     def initialize(self):
         self.register_entity_file("app.entity")
         #self.register_intent_file("launch.intent", self.handle_launch_intent)
-        self.apps = self.settings
+        #self.apps = self.settings
         
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
@@ -36,7 +36,7 @@ class Launcher(MycroftSkill):
         #    run(f'echo "application is sterminal" >> ~/apps.txt')
         #    application = "sterminal"
         #self.speak(f"launching {application}")
-        application = self.settings.get(app.replace("web browser", "browser"))
+        application = self.settings.get(app)
         self.acknowledge()
         try:
             run(application)
