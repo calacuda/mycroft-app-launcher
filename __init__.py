@@ -8,7 +8,8 @@ class Launcher(MycroftSkill):
     def __init__(self):
         super().__init__()
         #self.initialize()
-
+        self.apps = self.settings.get("Applications")
+        
     def initialize(self):
         self.register_entity_file("app.entity")
         #self.register_intent_file("launch.intent", self.handle_launch_intent)
