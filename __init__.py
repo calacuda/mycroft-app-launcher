@@ -24,13 +24,14 @@ class Launcher(MycroftSkill):
         #run(f'echo "context {app.context}" >> ~/out.txt')
         #a = "app"
         try:
-            run(f'echo "apps :  {apps}" > ~/apps.txt')
+            run(f'echo "apps :  {apps}" >> ~/apps.txt')
         except:
-            run(f'echo "apps not assigned" > ~/apps.txt')
+            run(f'echo "apps not assigned" >> ~/apps.txt')
         #application = "sterminal"
         try:
             application = self.apps.get(app)
         except:
+            run(f'echo "application is sterminal" >> ~/apps.txt')
             application = "sterminal"
         #self.speak(f"launching {application}")
         self.acknowledge()
