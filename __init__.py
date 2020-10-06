@@ -15,7 +15,8 @@ class Launcher(MycroftSkill):
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
         #self.speak(f"app is {app}")
-        print("app : ", app)
+        #print("app : ", app)
+        run(f'mimic "{app}"')
         application = "sterminal"
         # application = self.apps.get(app)
         #self.speak(f"launching {application}")
@@ -27,7 +28,7 @@ class Launcher(MycroftSkill):
 
 
 def create_skill():
-    Launcher().handle_launch_intent("literally fucking anything")
+    #Launcher().handle_launch_intent("literally fucking anything")
     return Launcher()
 
-create_skill()
+#create_skill()
