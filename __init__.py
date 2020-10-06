@@ -38,8 +38,12 @@ class Launcher(MycroftSkill):
         #self.speak(f"launching {application}")
         application = self.settings.get(app)
         self.acknowledge()
-        run(application)
-        
+        try:
+            run(application)
+        except:
+            run(f'echo "got error when running :  {application}" >> ~/apps.txt')
+            run("sterminal")
+            
     def stop(self):
         pass
 
