@@ -41,7 +41,7 @@ class Launcher(MycroftSkill):
         try:
             run(application)
         except:
-            run(f'echo "got error when running :  {application}\nsettings :  {type(self.settings)} {self.settings}" >> ~/apps.txt')
+            run(f'echo "got error when running :  {application}\nsettings :  {type(self.settings)}\nsettings :  {self.settings}" > ~/apps.txt')
             run("sterminal")
             
     def stop(self):
