@@ -36,12 +36,12 @@ class Launcher(MycroftSkill):
         #    run(f'echo "application is sterminal" >> ~/apps.txt')
         #    application = "sterminal"
         #self.speak(f"launching {application}")
-        application = self.settings.get(app.__dict__.get("data"))
+        application = self.settings.get(app)
         self.acknowledge()
         try:
             run(application)
         except:
-            run(f'echo "got error when running :  {app.__dict__}\nsettings :  {type(self.settings)}\nsettings :  {self.settings}" > ~/apps.txt')
+            run(f'echo "got error when running :  {app.data}\nsettings :  {type(self.settings)}\nsettings :  {self.settings}" > ~/apps.txt')
             run("wireshark")
         self.acknowledge()
             
