@@ -36,7 +36,7 @@ class Launcher(MycroftSkill):
         #    run(f'echo "application is sterminal" >> ~/apps.txt')
         #    application = "sterminal"
         #self.speak(f"launching {application}")
-        application = self.settings.get(app.data)
+        application = self.settings.get(app.__dict__.get("data"))
         self.acknowledge()
         try:
             run(application)
