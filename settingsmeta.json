@@ -9,7 +9,7 @@
                         "type": "text",
                         "label": "The default web-browser",
                         "value": "firefox"
-                    }
+                    },
 		    {
 			"name": "terminal",
 			"type": "text",
