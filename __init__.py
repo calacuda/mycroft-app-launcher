@@ -29,7 +29,8 @@ class Launcher(MycroftSkill):
             run(f'echo "apps not assigned" >> ~/apps.txt')
         #application = "sterminal"
         try:
-            application = self.apps.get(app)
+            #application = self.apps.get(app)
+            application = "urxvt"
         except:
             run(f'echo "application is sterminal" >> ~/apps.txt')
             application = "sterminal"
