@@ -8,7 +8,7 @@ class Launcher(MycroftSkill):
     def __init__(self):
         super().__init__()
         #self.initialize()
-        self.apps = self.settings.keys()
+        self.apps = self.settings
         
     def initialize(self):
         self.register_entity_file("app.entity")
@@ -23,6 +23,7 @@ class Launcher(MycroftSkill):
         #run(f'echo "data {app.data}" >> ~/out.txt')
         #run(f'echo "context {app.context}" >> ~/out.txt')
         #a = "app"
+        run(f'echo "self.settings" > ~/settings.txt')
         try:
             run(f'echo "apps :  {apps}" > ~/apps.txt')
         except:
