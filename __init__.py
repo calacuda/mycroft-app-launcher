@@ -1,12 +1,3 @@
-"""
-app-launcher.py
-
-a mycroft skill that launches apps found on your computer.
-
-By: Calacuda | MIT Licence | Epoch: 10/5/2020
-"""
-
-
 from adapt.intent import IntentBuilder 
 from mycroft import MycroftSkill, intent_handler
 from os import system
@@ -42,7 +33,4 @@ class Launcher(MycroftSkill):
 
 
 def create_skill():
-    #run("mimic foobar")
     return Launcher()
-
-#create_skill()
