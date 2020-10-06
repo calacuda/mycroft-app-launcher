@@ -10,6 +10,7 @@ class Launcher(MycroftSkill):
         #self.initialize()
 
     def initialize(self):
+        self.register_entity_file("app.entity")
         self.apps = self.settings.get("Applications")
         
     @intent_handler("launch.intent")

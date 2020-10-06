@@ -1,5 +1,5 @@
-launch (a | the) (terminal | browser)
-run (a | the) (terminal | browser)
-open (a | the) (terminal | browser)
-start (a | the) (terminal | browser)
-spin up (a | the) (terminal | browser)
+launch (a | the) {app}
+run (a | the) {app}
+open (a | the) {app}
+start (a | the) {app}
+spin up (a | the) {app}
