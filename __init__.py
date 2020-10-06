@@ -23,7 +23,7 @@ class Launcher(MycroftSkill):
         #run(f'echo "data {app.data}" >> ~/out.txt')
         #run(f'echo "context {app.context}" >> ~/out.txt')
         #a = "app"
-        run(f'echo "self.settings" > ~/settings.txt')
+        run(f'echo "{self.settings}" > ~/settings.txt')
         try:
             run(f'echo "apps :  {apps}" > ~/apps.txt')
         except:
