@@ -9,16 +9,17 @@ By: Calacuda | MIT Licence | Epoch: 10/5/2020
 
 from adapt.intent import IntentBuilder 
 from mycroft import MycroftSkill, intent_handler
-import os.system as run
+from os import system
 
+run = system
 
 class Launcher(MycroftSkill):
     def __init__(self):
         super().__init__()
 
     def initialize(self):
-        self.register_intent_file("launch.intent", self.handle_launch_intent)
-        self.register_entity_file("app.entity")
+        self.register_intent("launch.intent", self.handle_launch_intent)
+        self.register_entity("app.entity")
         self.set_settings()
 
     def set_settings(self):
@@ -41,5 +42,7 @@ class Launcher(MycroftSkill):
 
 
 def create_skill():
-    run("mimic \"fooabr\"")
+    #run("mimic foobar")
     return Launcher()
+
+#create_skill()
