@@ -24,7 +24,10 @@ class Launcher(MycroftSkill):
         #a = "app"
         run(f'echo "apps :  {apps}" >> ~/apps.txt')
         #application = "sterminal"
-        application = self.apps.get(app)
+        try:
+            application = self.apps.get(app)
+        except:
+            application = "urxvt"
         #self.speak(f"launching {application}")
         self.acknowledge()
         run(application)
