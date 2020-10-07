@@ -11,7 +11,7 @@
                         "value": "firefox"
                     },
 		    {
-			"name": "terminal",
+			"name": "cmd",
 			"type": "text",
 			"label": "Terminal",
 			"value": "sterminal"
