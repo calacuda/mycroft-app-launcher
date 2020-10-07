@@ -29,6 +29,7 @@ class Launcher(MycroftSkill):
         #print(self.settings)
         run(f'notify-send "ERROR" "{self.settings.keys()}"')
         white_list = self.settings.get("white list").split(",")
+        run(f'notify-send "ERROR" "{white_list}"')
         if app_title not in white_list  and app_title in self.settings.keys():
             return self.settings.get(app_title)
         #elif app_title not in white_list and app_title not in self.settings.keys():
@@ -41,7 +42,7 @@ class Launcher(MycroftSkill):
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
         application = self.get_target_app(app) # self.settings.get(self.equivilency(app.data.get("app")))
-        run(f'notify-send "ERROR" "{application}"')
+        #run(f'notify-send "ERROR" "{application}"')
         self.acknowledge()
         if application != 1:
             try:

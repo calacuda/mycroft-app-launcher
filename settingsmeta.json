@@ -11,7 +11,7 @@
                         "value": "firefox"
                     },
 		    {
-			"name": "cmd",
+			"name": "terminal",
 			"type": "text",
 			"label": "Terminal",
 			"value": "sterminal"
@@ -25,13 +25,13 @@
 		    {
 			"name": "audio controler",
 			"type": "text",
-			"label": "audio control program",
+			"label": "Audio Control Program",
 			"value": "pavucontrol"
 		    },
 		    {
 			"name": "white list",
 			"type": "text",
-			"label": "whitelisted programs (comma separated)",
+			"label": "Whitelisted Programs (comma separated)",
 			"value": "discord,steam,lutris,minecraft"
 		    }
                 ]
