@@ -17,7 +17,7 @@
 			"value": "urxvt"
 		    },
 		    {
-			"name": "chat client",
+			"name": "chat",
 			"type": "text",
 			"label": "Chat Client",
 			"value": "caprine"

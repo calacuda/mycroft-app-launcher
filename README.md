@@ -30,7 +30,8 @@ other "special programs" include:
  -- terminal = urxvt
  -- audio controller = pavucontrol (not working yet, when mycroft hears "audio 
     	  	       		    controller" it triggers a different skill)
- -- chat client = caprine (facebook messenger client)
+ -- chat client = caprine (facebook messenger client) (also not working yet. Mycroft
+    	 	  	  	    	      	       trys to download aircrack.)
  
 
 
@@ -38,5 +39,5 @@ other "special programs" include:
 
 1. Add online settigns update function. (This functionality is already in mycroft so
    it will be easy.)
-2. Fix audio controller. (I'll probably rename it or something)
+2. Fix audio controller and chat client. (I'll probably rename them or something)
 3. Add more phrases for the intent parser. (recuring iterative process)
