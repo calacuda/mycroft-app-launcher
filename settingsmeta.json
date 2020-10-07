@@ -23,7 +23,7 @@
 			"value": "caprine"
 		    },
 		    {
-			"name": "audio controler",
+			"name": "audio controller",
 			"type": "text",
 			"label": "Audio Control Program",
 			"value": "pavucontrol"
