@@ -26,6 +26,7 @@ class Launcher(MycroftSkill):
             return app_name
 
     def get_target_app(self, app_title):
+        run(f"notify-send 'Error' '{app_title}'")
         app_name = self.equivilency(app_title)
         white_list = self.settings.get("white list").split(",")
         if app_title not in white_list and app_title in self.settings.keys():
