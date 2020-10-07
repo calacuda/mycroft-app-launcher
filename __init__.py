@@ -24,7 +24,7 @@ class Launcher(MycroftSkill):
             return app_name
 
     def get_target_app(self, app_title):
-        run(f'notify-send "ERROR" "{self.settings}"')
+        #run(f'notify-send "ERROR" "{self.settings}"')
         app_name = self.equivilency(app_title)
         #print(self.settings)
         run(f'notify-send "ERROR" "{self.settings}"')
@@ -41,6 +41,7 @@ class Launcher(MycroftSkill):
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
         application = self.get_target_app(app) # self.settings.get(self.equivilency(app.data.get("app")))
+        run(f'notify-send "ERROR" "{application}"')
         self.acknowledge()
         if application != 1:
             try:
