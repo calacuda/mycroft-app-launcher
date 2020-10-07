@@ -8,13 +8,13 @@
                         "name": "browser",
                         "type": "text",
                         "label": "Web-Browser",
-                        "value": "firefox"
+                        "value": "$BROWSER"
                     },
 		    {
 			"name": "terminal",
 			"type": "text",
 			"label": "Terminal",
-			"value": "sterminal"
+			"value": "$TERMINAL"
 		    },
 		    {
 			"name": "chat client",
@@ -32,7 +32,7 @@
 			"name": "white list",
 			"type": "text",
 			"label": "Whitelisted Programs (comma separated)",
-			"value": "discord,steam,lutris,minecraft"
+			"value": "discord,steam,lutris,minecraft,zoom"
 		    }
                 ]
             }
