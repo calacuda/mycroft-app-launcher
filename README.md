@@ -8,7 +8,8 @@ say somehting to the effect of:
  -- launch (program)
  -- start (program)
  -- play (game)
-
+ -- spin up (program)
+ -- boot up (program)
 
 ### special programs:
 
