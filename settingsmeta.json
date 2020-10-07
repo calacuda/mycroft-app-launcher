@@ -7,14 +7,32 @@
                     {
                         "name": "browser",
                         "type": "text",
-                        "label": "The default web-browser",
+                        "label": "Web-Browser",
                         "value": "firefox"
                     },
 		    {
 			"name": "terminal",
 			"type": "text",
-			"label": "The default terminal",
+			"label": "Terminal",
 			"value": "sterminal"
+		    },
+		    {
+			"name": "chat client",
+			"type": "text",
+			"label": "Chat Client",
+			"value": "caprine"
+		    },
+		    {
+			"name": "audio controler",
+			"type": "text",
+			"label": "audio control program",
+			"value": "pavucontrol"
+		    },
+		    {
+			"name": "white list"
+			"type": "text"
+			"label": "whitelisted programs (comma separated)"
+			"value": "discord,steam,lutris,minecraft"
 		    }
                 ]
             }
