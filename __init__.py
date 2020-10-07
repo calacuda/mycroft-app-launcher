@@ -16,8 +16,10 @@ class Launcher(MycroftSkill):
         #self.apps = self.settings
 
     def equivilency(self, app_name):
-        if app_name in {"web browser", "browser", "google", "google machine"}:
+        if app_name in {"web browser", "browser", "google", "google machine", "internet", "internet program"}:
             return "browser"
+        elif app_name in {"terminal", "prompt", "command prompt", "CLI"}:
+            return "terminal"
         else:
             return app_name
 
