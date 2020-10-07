@@ -19,7 +19,7 @@
 		    {
 			"name": "messenger",
 			"type": "text",
-			"label": "Chat Client",
+			"label": "Messenger Client",
 			"value": "caprine"
 		    },
 		    {

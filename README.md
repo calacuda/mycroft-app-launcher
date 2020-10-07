@@ -7,7 +7,6 @@ say somehting to the effect of:
  -- open (prgram)
  -- launch (program)
  -- start (program)
- -- play (game)
  -- spin up (program)
  -- boot up (program)
 
