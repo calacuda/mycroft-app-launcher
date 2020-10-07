@@ -28,7 +28,7 @@ class Launcher(MycroftSkill):
     def get_target_app(self, app_title):
         #run(f"notify-send 'Error' '{app_title}'")
         app_name = self.equivilency(app_title)
-        run(f"notify-send 'Error' '{app_name}'")
+        #run(f"notify-send 'Error' '{app_name}'")
         white_list = self.settings.get("white list").split(",")
         if app_title not in white_list and app_title in self.settings.keys():
             return self.settings.get(app_title)
@@ -45,7 +45,7 @@ class Launcher(MycroftSkill):
         self.acknowledge()
         if application != 1:
             try:
-                run(f'notify-send "DEBUG" "{application}"')
+                #run(f'notify-send "RUNNING" "{application}"')
                 run(application)
             except:
                 self.speak("bruh... I can't do that.")
