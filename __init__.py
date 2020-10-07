@@ -18,7 +18,7 @@ class Launcher(MycroftSkill):
     def equivilency(self, app_name):
         if app_name in {"web browser", "browser", "google", "google machine", "internet", "internet program"}:
             return "browser"
-        elif app_name in {"terminal", "prompt", "command prompt", "CLI"}:
+        elif app_name in {"terminal", "terminals", "prompt", "prompts", "command prompt", "command prompts", "CLI", "CLI's"}:
             return "terminal"
         elif app_name == "minecraft":
             return "minecraft-launcher"
@@ -28,7 +28,7 @@ class Launcher(MycroftSkill):
     def get_target_app(self, app_title):
         #run(f"notify-send 'Error' '{app_title}'")
         app_name = self.equivilency(app_title)
-        run(f"notify-send 'DEBUG' 'name :  {app_name}'")
+        run(f"notify-send 'DEBUG' 'name :  {app_name} {app_name in self.settings.keys()}'")
         white_list = self.settings.get("white list").split(",")
         if app_name in self.settings.keys():
             return self.settings.get(app_title)
