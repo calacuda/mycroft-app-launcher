@@ -8,13 +8,13 @@
                         "name": "browser",
                         "type": "text",
                         "label": "Web-Browser",
-                        "value": "$BROWSER"
+                        "value": "firefox"
                     },
 		    {
 			"name": "terminal",
 			"type": "text",
 			"label": "Terminal",
-			"value": "$TERMINAL"
+			"value": "urxvt"
 		    },
 		    {
 			"name": "chat client",
