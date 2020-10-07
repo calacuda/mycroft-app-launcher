@@ -35,5 +35,8 @@ other "special programs" include:
 
 1. Add online settigns update function. (This functionality is already in mycroft so
    it will be easy.)
-2. make user definable "Special Programs" (maybe by having a json text input on mycrofts website?)
-3. Add more phrases for the intent parser. (recuring iterative process)
+2. Make user definable "Special Programs" (maybe by having a json text input on mycrofts
+   	     	       			   website?)
+3. Add a user toggleable proxychains mode. (If on every app is run through proxcychains
+       	      		 	     	    if all apps are run normally)
+4. Add more phrases for the intent parser. (recuring iterative process)
