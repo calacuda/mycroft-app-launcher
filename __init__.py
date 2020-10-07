@@ -37,7 +37,7 @@ class Launcher(MycroftSkill):
         
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
-        application = self.settings.get(self.equivilency(app.data.get("app")))
+        application = self.get_target_app(app) # self.settings.get(self.equivilency(app.data.get("app")))
         self.acknowledge()
         if application != 1:
             try:
