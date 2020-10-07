@@ -1,5 +1,5 @@
-launch (a | the) {app}
-run (a | the) {app}
-open (a | the) {app}
-start (a | the) {app}
-spin up (a | the) {app}
+(please |) launch (a | the |) {app}
+(please |) run (a | the) {app}
+(please |) open (a | the |) {app}
+(please |) start (a | the |) {app}
+(please |) spin up (a | the |) {app}
