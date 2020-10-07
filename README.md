@@ -27,16 +27,13 @@ is coming soon.
 other "special programs" include:
  -- web browser = firefox
  -- terminal = urxvt
- -- audio controller = pavucontrol (not working yet, when mycroft hears "audio 
-    	  	       		    controller" it triggers a different skill)
- -- chat client = caprine (facebook messenger client) (also not working yet. Mycroft
-    	 	  	  	    	      	       trys to download aircrack.)
- 
+ -- audio controller = pavucontrol
+ -- chat client = caprine (facebook messenger client)
 
 
 ### TODO's:
 
 1. Add online settigns update function. (This functionality is already in mycroft so
    it will be easy.)
-2. Fix audio controller and chat client. (I'll probably rename them or something)
+2. make user definable "Special Programs" (maybe by having a json text input on mycrofts website?)
 3. Add more phrases for the intent parser. (recuring iterative process)
