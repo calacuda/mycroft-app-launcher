@@ -5,7 +5,7 @@
                 "name": "Applications",
                 "fields": [
                     {
-                        "name": "web browser",
+                        "name": "browser",
                         "type": "text",
                         "label": "The default web-browser",
                         "value": "firefox"
