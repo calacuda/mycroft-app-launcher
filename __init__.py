@@ -20,6 +20,8 @@ class Launcher(MycroftSkill):
             return "browser"
         elif app_name in {"terminal", "prompt", "command prompt", "CLI"}:
             return "terminal"
+        elif app_name == "minecraft":
+            return "minecraft-launcher"
         else:
             return app_name
 
@@ -41,6 +43,7 @@ class Launcher(MycroftSkill):
         self.acknowledge()
         if application != 1:
             try:
+                
                 run(application)
             except:
                 run(f'echo "got error when running :  {app.__dict__}\nsettings :  {type(self.settings)}\nsettings :  {self.settings}" > ~/mycroft_launcher_error.txt')

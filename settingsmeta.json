@@ -32,7 +32,7 @@
 			"name": "white list",
 			"type": "text",
 			"label": "Whitelisted Programs (comma separated)",
-			"value": "discord,steam,lutris,minecraft,zoom"
+			"value": "discord,steam,lutris,minecraft-launcher,zoom"
 		    }
                 ]
             }
