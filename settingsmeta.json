@@ -29,9 +29,9 @@
 			"value": "pavucontrol"
 		    },
 		    {
-			"name": "white list"
-			"type": "text"
-			"label": "whitelisted programs (comma separated)"
+			"name": "white list",
+			"type": "text",
+			"label": "whitelisted programs (comma separated)",
 			"value": "discord,steam,lutris,minecraft"
 		    }
                 ]
