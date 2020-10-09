@@ -37,6 +37,9 @@ other "special programs" include:
    it will be easy.)
 2. Make user definable "Special Programs" (maybe by having a json text input on mycrofts
    	     	       			   website?)
+3. make a julia/python repl mode. (the user would say something like "launch julia", the
+   	  	       	    	   skill would open an interactive julia repl, with voice
+				   control and typing, in a fully equiped terminal emulator) 
 3. Add a user toggleable proxychains mode. (If on every app is run through proxcychains
        	      		 	     	    if all apps are run normally)
 4. Add more phrases for the intent parser. (recuring iterative process)
