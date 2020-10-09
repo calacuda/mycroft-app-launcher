@@ -44,8 +44,8 @@ class Launcher(MycroftSkill):
         application = self.get_target_app(app.data.get("app")) # self.settings.get(self.equivilency(app.data.get("app")))
         #self.acknowledge()
         if application != 1:
+            run(f'notify-send "Running" "{application}"')
             try:
-                run(f'notify-send "Running" "{application}"')
                 run(application)
             except:
                 self.speak("bruh... I can't do that.")
