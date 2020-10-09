@@ -52,15 +52,6 @@ class Launcher(MycroftSkill):
         else:
             run('notify-send "Mycroft" "I can\'t run that!"')
             self.speak_dialog("unknown_app")
-
-    @intent_handler("repl.intent")
-    def handle_repl_intent(self, repl):
-        """
-        handles repl activation, mode setting, and typing.
-        """
-        run(f'notify-send "debug" "would boot into:  {repl.data.get("repl")}"')
-        pass
-
             
     def stop(self):
         pass
