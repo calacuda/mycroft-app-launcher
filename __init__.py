@@ -52,12 +52,6 @@ class Launcher(MycroftSkill):
         else:
             run('notify-send "Mycroft" "I can\'t run that!"')
             self.speak_dialog("unknown_app")
-
-    def converse(self, utterances, lang):
-        """
-        handles repl's
-        """
-        run(f'notify-send "debug" "{utterance}"')
             
     def stop(self):
         pass
