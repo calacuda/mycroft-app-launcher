@@ -40,6 +40,6 @@ other "special programs" include:
 3. make a julia/python repl mode. (the user would say something like "launch julia", the
    	  	       	    	   skill would open an interactive julia repl, with voice
 				   control and typing, in a fully equiped terminal emulator) 
-3. Add a user toggleable proxychains mode. (If on every app is run through proxcychains
+4. Add a user toggleable proxychains mode. (If on every app is run through proxcychains
        	      		 	     	    if all apps are run normally)
-4. Add more phrases for the intent parser. (recuring iterative process)
+5. Add more phrases for the intent parser. (recuring iterative process)
