@@ -16,7 +16,7 @@ I'm using "Special Programs" to mean programs that can be called based on what t
 prgram they are not just by their name.
 
 
-These are so you could say "Hey Mycroft, Please launch a terminal." and Maycroft will
+These are so you could say "Hey Mycroft, Please launch a terminal." and Mycroft will
 know what you mean even though there is no program called "terminal". (NOTE: You can
 still explicitly specifiy the terminal to use, but this is easier. Right now one can
 set the the default terminal in the "settingsmeta.json" file. This is located in the
