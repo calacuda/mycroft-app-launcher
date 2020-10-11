@@ -39,11 +39,12 @@ class Launcher(MycroftSkill):
         
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
-        run(f'notify-send "DEBUG" "{app.data.get("app")}"')
+        #run(f'notify-send "DEBUG" "{app.data.get("app")}"')
         self.acknowledge()
         application = self.get_target_app(app.data.get("app")) # self.settings.get(self.equivilency(app.data.get("app")))
         #self.acknowledge()
         if application != 1:
+            self.speak(f"running {application}")
             run(f'notify-send "Running" "{application}"')
             try:
                 run(application)
