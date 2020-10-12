@@ -61,5 +61,5 @@ class Launcher(MycroftSkill):
 
 
 def create_skill():
-    cmd('notify-send "debug" "making app launcher"')
+    #cmd('notify-send "debug" "making app launcher"')
     return Launcher()
