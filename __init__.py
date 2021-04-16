@@ -8,15 +8,14 @@ class Launcher(MycroftSkill):
     def __init__(self):
         super().__init__()
         #self.initialize()
-        #self.apps = self.settings
 
     def initialize(self):
+        vocab_dir = join(self.root_dir, "/locale/en-us") 
         user_apps = [alias[1] for alias in self.get_aliases(self.settings.get("aliases"))]
         for app in self.settings.get("white list").split(","):
             user_apps.append(app)
-        #with open(join(self.vocab_dir, 'app.entity'), 'a') as f:
-        #    f.write("\n".join(user_apps))
-        cmd(f'echo "{dir(self)}" >> ~/mycroft_error.txt')
+        with open(join(vocab_dir, 'app.entity'), 'a') as f:
+            f.write("\n".join(user_apps))
         self.register_entity_file("app.entity")
         #self.register_intent_file("launch.intent", self.handle_launch_intent)
         #self.apps = self.settings
@@ -25,7 +24,6 @@ class Launcher(MycroftSkill):
         """
         splits the aliases setting into a a more computer friendly format.
         """
-        # cmd(f"notify-send {self.settings}")
         print("settings : ", self.settings.keys())
         aliases = {}
         for alias in [(alias.split("=")[0].strip(" "), alias.split("=")[1].strip(" "))
@@ -97,4 +95,5 @@ def create_skill():
 
 if __name__ == "__main__":
     skill = Launcher()
-    skill.handle_launch_intent("pulse audio")
+    # skill.handle_launch_intent("pulse audio")
+    skill.initialize()
