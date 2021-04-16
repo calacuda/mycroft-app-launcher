@@ -20,7 +20,7 @@ class Launcher(MycroftSkill):
         splits the aliases setting into a a more computer friendly format.
         """
         # cmd(f"notify-send {self.settings}")
-        print("settings : ", self.settings)
+        print("settings : ", self.settings.keys())
         aliases = {}
         for alias in [(alias.split("=")[0].strip(" "), alias.split("=")[1].strip(" "))
                       for alias in self.settings.get("aliases").split(", ")]:
