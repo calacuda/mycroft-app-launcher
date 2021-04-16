@@ -16,7 +16,7 @@ class Launcher(MycroftSkill):
             user_apps.append(app)
         #with open(join(self.vocab_dir, 'app.entity'), 'a') as f:
         #    f.write("\n".join(user_apps))
-        print("\n\nself : ", dir(self), "\n\n")
+        cmd(f'echo "{dir(self)}" >> ~/mycroft_error.txt')
         self.register_entity_file("app.entity")
         #self.register_intent_file("launch.intent", self.handle_launch_intent)
         #self.apps = self.settings
