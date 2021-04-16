@@ -58,7 +58,13 @@ class Launcher(MycroftSkill):
         #cmd(f'notify-send "DEBUG" "{app.data.get("app")}"')
         self.acknowledge()
         print("app : ", app.data)
-        application = self.get_target_app(app.data.get("app")) # self.settings.get(self.equivilency(app.data.get("app")))
+        if "app" in app.data.keys():
+            key = "app"  # self.settings.get(self.equivilency(app.data.get("app")))
+        elif "game" in app.data.keys():
+            key = "game"
+        else:
+            key = "app"
+        application = self.get_target_app(app.data.get(key))
         # application = self.get_target_app(app)
         print("application : ", application)
         #self.acknowledge()
