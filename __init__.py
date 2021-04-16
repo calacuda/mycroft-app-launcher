@@ -19,7 +19,7 @@ class Launcher(MycroftSkill):
         """
         splits the aliases setting into a a more computer friendly format.
         """
-        cmd(f"notify-send {self.settings}")
+        # cmd(f"notify-send {self.settings}")
         aliases = {}
         for alias in [(alias.split("=")[0].strip(" "), alias.split("=")[1].strip(" "))
                       for alias in self.settings.get("aliases").split(", ")]:
@@ -28,7 +28,7 @@ class Launcher(MycroftSkill):
 
     def equivilency(self, app_name):
         aliases = self.get_aliases(self.settings.get("aliases"))
-        print(aliases)
+        print("aliases : ", aliases)
         if app_name in {"web browser", "browser", "google", "google machine", "internet", "internet program"}:
             return "browser"
         elif app_name in {"terminal", "terminals", "prompt", "prompts", "command prompt", "command prompts", "CLI", "CLI's"}:
@@ -58,7 +58,7 @@ class Launcher(MycroftSkill):
         self.acknowledge()
         # application = self.get_target_app(app.data.get("app")) # self.settings.get(self.equivilency(app.data.get("app")))
         application = self.get_target_app(app)
-        print(application)
+        print("application : ", application)
         #self.acknowledge()
         if application != 1:
             self.speak(f"running {application}")
@@ -80,6 +80,7 @@ class Launcher(MycroftSkill):
 def create_skill():
     #cmd('notify-send "debug" "making app launcher"')
     return Launcher()
+
 
 if __name__ == "__main__":
     skill = Launcher()
