@@ -14,8 +14,8 @@ class Launcher(MycroftSkill):
         user_apps = [alias for alias in self.get_aliases(self.settings.get("aliases")).keys()]
         # for app in self.settings.get("white list").split(","):
         #     user_apps.append(app)
-        print("user apps : ", user_apps)
-        print("aliases : ", self.get_aliases(self.settings.get("aliases")))
+        # print("user apps : ", user_apps)
+        # print("aliases : ", self.get_aliases(self.settings.get("aliases")))
         with open(join(vocab_dir, 'app.entity'), 'a') as f:
             f.write("\n")
             f.write("\n".join(user_apps))
@@ -27,7 +27,7 @@ class Launcher(MycroftSkill):
         """
         splits the aliases setting into a a more computer friendly format.
         """
-        print("settings : ", self.settings.keys())
+        # print("settings : ", self.settings.keys())
         aliases = {}
         for alias in [(alias.split("=")[0].strip(" "), alias.split("=")[1].strip(" "))
                       for alias in self.settings.get("aliases").split(", ")]:
@@ -37,7 +37,7 @@ class Launcher(MycroftSkill):
     def equivilency(self, app_name):
         # cmd(f'notify-send "equivilancy" "{app_name}"')
         aliases = self.get_aliases(self.settings.get("aliases"))
-        print("aliases : ", aliases)
+        # print("aliases : ", aliases)
         if app_name in {"web browser", "browser", "google", "google machine", "internet", "internet program"}:
             return "browser"
         elif app_name in {"terminal", "terminals", "prompt", "prompts", "command prompt", "command prompts", "CLI", "CLI's"}:
@@ -52,8 +52,8 @@ class Launcher(MycroftSkill):
 
     def get_target_app(self, app_title):
         app_name = self.equivilency(app_title.lower())
-        print("app_name : ", app_name)
-        cmd(f'notify-send "Mycroft" "{app_name}"')
+        # print("app_name : ", app_name)
+        # cmd(f'notify-send "Mycroft" "{app_name}"')
         white_list = self.settings.get("white list").split(",")
         if app_name in self.settings.keys():
             return self.settings.get(app_title)
@@ -66,14 +66,13 @@ class Launcher(MycroftSkill):
 
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
-        #cmd(f'notify-send "DEBUG" "{app.data.get("app")}"')
+        # cmd(f'notify-send "DEBUG" "{app.data.get("app")}"')
         self.acknowledge()
-        print("app : ", app.data)
+        # print("app : ", app.data)
         application = self.get_target_app(app.data.get("app"))
-        
         # application = self.get_target_app(app)
-        print("application : ", application)
-        #self.acknowledge()
+        # print("application : ", application)
+        # self.acknowledge()
         if application != 1:
             self.speak(f"running {application}")
             cmd(f'notify-send "Running" "{application}"')
@@ -95,11 +94,11 @@ class Launcher(MycroftSkill):
 
 
 def create_skill():
-    #cmd('notify-send "debug" "making app launcher"')
+    # cmd('notify-send "debug" "making app launcher"')
     return Launcher()
 
 
 if __name__ == "__main__":
     skill = Launcher()
     # skill.handle_launch_intent("pulse audio")
-    skill.initialize()
+    # skill.initialize()
