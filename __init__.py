@@ -57,7 +57,7 @@ class Launcher(MycroftSkill):
     def handle_launch_intent(self, app):
         #cmd(f'notify-send "DEBUG" "{app.data.get("app")}"')
         self.acknowledge()
-        # print("app : ", app.data)
+        print("app : ", app.data)
         application = self.get_target_app(app.data.get("app")) # self.settings.get(self.equivilency(app.data.get("app")))
         # application = self.get_target_app(app)
         print("application : ", application)
@@ -67,13 +67,16 @@ class Launcher(MycroftSkill):
             cmd(f'notify-send "Running" "{application}"')
             try:
                 cmd(application)
+                return True
             except:
                 self.speak("bruh... I can't do that.")
                 cmd(f'echo "got error when running :  {app.__dict__}\nsettings :  {type(self.settings)}\nsettings :  {self.settings}" > ~/mycroft_launcher_error.txt')
                 cmd(f'notify-send "Mycroft" "Error opening application {application}. Do you have it installed? Was it spelled correctly whitelisted? Check ~/mycroft_launcher_error.txt for more details." -t 5000')
+                return False
         else:
             cmd('notify-send "Mycroft" "I can\'t run that!"')
             self.speak_dialog("unknown_app")
+            return False
 
     def stop(self):
         pass
