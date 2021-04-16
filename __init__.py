@@ -14,6 +14,8 @@ class Launcher(MycroftSkill):
         user_apps = [alias[0] for alias in self.get_aliases(self.settings.get("aliases"))]
         # for app in self.settings.get("white list").split(","):
         #     user_apps.append(app)
+        print("user apps : ", user_apps)
+        print("aliases : ", self.get_aliases(self.settings.get("aliases")))
         with open(join(vocab_dir, 'app.entity'), 'a') as f:
             f.write("\n".join(user_apps))
         self.register_entity_file("app.entity")
