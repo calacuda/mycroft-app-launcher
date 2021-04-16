@@ -9,19 +9,32 @@ class Launcher(MycroftSkill):
         super().__init__()
         #self.initialize()
         #self.apps = self.settings
-        
+
     def initialize(self):
         self.register_entity_file("app.entity")
         #self.register_intent_file("launch.intent", self.handle_launch_intent)
         #self.apps = self.settings
 
+    def get_aliases(self, aliases):
+        """
+        splits the aliases setting into a a more computer friendly format.
+        """
+        aliases = {}
+        for alias in [(alias.split("=")[0].strip(" "), alias.split("=")[1].strip(" "))
+                      for alias in self.settings.get("aliases").split(", ")]:
+            aliases[alias[0]] = alias[1]
+        return aliases
+
     def equivilency(self, app_name):
+        aliases = self.get_aliases(self.settings.get("aliases"))
         if app_name in {"web browser", "browser", "google", "google machine", "internet", "internet program"}:
             return "browser"
         elif app_name in {"terminal", "terminals", "prompt", "prompts", "command prompt", "command prompts", "CLI", "CLI's"}:
             return "terminal"
         elif app_name == "minecraft":
             return "minecraft-launcher"
+        elif app_name in aliases.keys():
+            return aliases.get("app_name")
         else:
             return app_name
 
@@ -36,7 +49,7 @@ class Launcher(MycroftSkill):
             return app_name
         else:
             return 1
-        
+
     @intent_handler("launch.intent")
     def handle_launch_intent(self, app):
         #cmd(f'notify-send "DEBUG" "{app.data.get("app")}"')
@@ -55,7 +68,7 @@ class Launcher(MycroftSkill):
         else:
             cmd('notify-send "Mycroft" "I can\'t run that!"')
             self.speak_dialog("unknown_app")
-            
+
     def stop(self):
         pass
 

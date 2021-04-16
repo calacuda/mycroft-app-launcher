@@ -33,6 +33,12 @@
 			"type": "text",
 			"label": "Whitelisted Programs (comma separated)",
 			"value": "discord,steam,lutris,minecraft-launcher"
+		    },
+		    {
+			"name": "aliases",
+			"type": "text",
+			"label": "aliases (alias1=command1, alias2=command2...)",
+			"value": "minecraft=minecraft-launcher, pulse audio=pavucontrol, pokemon online=/usr/games/pokemmo-launcher"
 		    }
                 ]
             }
