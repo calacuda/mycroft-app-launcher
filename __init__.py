@@ -11,7 +11,7 @@ class Launcher(MycroftSkill):
 
     def initialize(self):
         vocab_dir = join(self.root_dir, "locale/en-us/")
-        user_apps = [alias for alias in self.get_aliases(self.settings.get("aliases")).keys()]
+        user_apps = [alias for alias in self.get_aliases(self.settings.get("aliases")).values()]
         # for app in self.settings.get("white list").split(","):
         #     user_apps.append(app)
         print("user apps : ", user_apps)
