@@ -35,6 +35,7 @@ class Launcher(MycroftSkill):
         return aliases
 
     def equivilency(self, app_name):
+        cmd(f'notify-send "equivilancy" "{app_name}"')
         aliases = self.get_aliases(self.settings.get("aliases"))
         print("aliases : ", aliases)
         if app_name in {"web browser", "browser", "google", "google machine", "internet", "internet program"}:
