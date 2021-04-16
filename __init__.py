@@ -11,12 +11,13 @@ class Launcher(MycroftSkill):
 
     def initialize(self):
         vocab_dir = join(self.root_dir, "locale/en-us/")
-        user_apps = [alias for alias in self.get_aliases(self.settings.get("aliases")).values()]
+        user_apps = [alias for alias in self.get_aliases(self.settings.get("aliases")).keys()]
         # for app in self.settings.get("white list").split(","):
         #     user_apps.append(app)
         print("user apps : ", user_apps)
         print("aliases : ", self.get_aliases(self.settings.get("aliases")))
         with open(join(vocab_dir, 'app.entity'), 'a') as f:
+            f.write("\n")
             f.write("\n".join(user_apps))
         self.register_entity_file("app.entity")
         #self.register_intent_file("launch.intent", self.handle_launch_intent)
